@@ -8,7 +8,7 @@ function all(){
 
 
 function findById(id){
-  return knex('cats').whereRaw('id = ?', [id])
+  return knex('cats').whereRaw('id = ?', [1])
 }
 
 module.exports = {
