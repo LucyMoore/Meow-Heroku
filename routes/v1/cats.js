@@ -6,7 +6,7 @@ var cats = require('../../models/cats')
 router.get('/', function(req, res, next) {
   cats.all()
   .then(function(cats){
-    res.json({ cats: 'MEOOOOW' })
+    res.json({ cats })
   })
 });
 
