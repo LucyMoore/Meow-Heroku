@@ -11,8 +11,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res){
-  var cat = cats.find(findById)
-  .then(function(cat){
+  cats.findById()
+  .then(function(cats){
     res.json({cat})
   })
 })
