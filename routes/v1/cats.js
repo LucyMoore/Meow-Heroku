@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
   })
 });
 
-router.get('/cats/:id', function(req, res){
-  cats.findById()
-  .then(function(cats){
-    res.json({cats})
+router.get('/:id', function(req, res){
+  var cat = cats.find(findById)
+  .then(function(cat){
+    res.json({cat})
   })
 })
 
