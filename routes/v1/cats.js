@@ -10,4 +10,11 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.get('/:id', function(req, res){
+  cats.findById(1)
+  .then(function(cats){
+    res.json({cats})
+  })
+})
+
 module.exports = router;

@@ -6,6 +6,11 @@ function all(){
   return knex.select().table('cats')
 }
 
+
+function findById(id){
+  return knex('cats').whereRaw('id = "'+id+ '"')
+}
+
 module.exports = {
   all: all
 }
